@@ -73,5 +73,10 @@ sudo tail -f /var/log/fail2ban.log
 ```
 Now you will see that from that IP address the connection is rejected, so it banned the IP succesfully 🙂
 
+# Want to unban an ip address? Sure! Anyone can get banned when doing testing! Hopefully you will have SSH access to your server!
+```
+sudo fail2ban-client set sshd unbanip xxx.yyy.zzz.hhh
+```
+
 The original idea was found on this script. Thanks for the ideas!
 https://raw.githubusercontent.com/miketabor/unifi-autoinstall/master/install.sh
