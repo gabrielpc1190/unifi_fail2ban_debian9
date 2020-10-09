@@ -75,8 +75,9 @@ Now you will see that from that IP address the connection is rejected, so it ban
 
 # Want to unban an ip address? Sure! Anyone can get banned when doing testing! Hopefully you will have SSH access to your server!
 ```
-sudo fail2ban-client set sshd unbanip xxx.yyy.zzz.hhh
+sudo fail2ban-client set unifi unbanip xxx.yyy.zzz.hhh
 ```
+Replace unifi with sshd or any other service you're protecting and voila! unbanned!
 
 The original idea was found on this script. Thanks for the ideas!
 https://raw.githubusercontent.com/miketabor/unifi-autoinstall/master/install.sh
