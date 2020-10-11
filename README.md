@@ -57,7 +57,7 @@ Status
 |- Number of jail:      2
 `- Jail list:   sshd, unifi
 ```
-# As you can see, both sshd and unifi filters are enabled.
+As you can see, both sshd and unifi filters are enabled.
 
 # Testing
 Now, from a mobile connection or any other IP you may use to try the block, try to login 4 times with incorrect credentials. You can see on this file the block being executed after the 4 try.
@@ -83,6 +83,21 @@ sudo tail -f /var/log/fail2ban.log
 ```
 Now you will see that from that IP address the connection is rejected, so it banned the IP succesfully 🙂
 
+# If you want to see the details of the bans being enforced by any one jail, like unifi jail, it is probably easier to use the fail2ban-client again:
+```
+sudo fail2ban-client status unifi
+```
+```
+Status for the jail: unifi
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:     15
+|  `- File list:        /var/log/unifi/server.log
+`- Actions
+   |- Currently banned: 1
+   |- Total banned:     1
+   `- Banned IP list: xx1.x1X.xxx.125
+```
 # Want to unban an ip address? Sure! Anyone can get banned when doing testing! Hopefully you will have SSH access to your server!
 ```
 sudo fail2ban-client set unifi unbanip xxx.yyy.zzz.hhh
