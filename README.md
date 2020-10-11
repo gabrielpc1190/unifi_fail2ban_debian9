@@ -104,5 +104,8 @@ sudo fail2ban-client set unifi unbanip xxx.yyy.zzz.hhh
 ```
 Replace unifi with sshd or any other service you're protecting and voila! unbanned!
 
-The original idea was found on this script. Thanks for the ideas!
+Related articles to this script. Thanks for the ideas!
 https://raw.githubusercontent.com/miketabor/unifi-autoinstall/master/install.sh
+
+How To Protect an Apache Server with Fail2Ban on Ubuntu 14.04
+https://www.digitalocean.com/community/tutorials/how-to-protect-an-apache-server-with-fail2ban-on-ubuntu-14-04
