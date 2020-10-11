@@ -48,6 +48,16 @@ Make sure to edit the fields based on your specific case, on my case, I want to 
 ```
 sudo service fail2ban restart
 ```
+# Check if the filters were loaded correctly:
+```
+sudo fail2ban-client status
+```
+```
+Status
+|- Number of jail:      2
+`- Jail list:   sshd, unifi
+```
+# As you can see, both sshd and unifi filters are enabled.
 
 # Testing
 Now, from a mobile connection or any other IP you may use to try the block, try to login 4 times with incorrect credentials. You can see on this file the block being executed after the 4 try.
