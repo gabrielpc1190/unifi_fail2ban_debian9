@@ -104,6 +104,9 @@ sudo fail2ban-client set unifi unbanip xxx.yyy.zzz.hhh
 ```
 Replace unifi with sshd or any other service you're protecting and voila! unbanned!
 
+Want to ban the host permanently? Look at this guide!
+https://arno0x0x.wordpress.com/2015/12/30/fail2ban-permanent-persistent-bans/
+
 Related articles to this script. Thanks for the ideas!
 https://raw.githubusercontent.com/miketabor/unifi-autoinstall/master/install.sh
 
