@@ -4,7 +4,7 @@
 ```
 sudo apt-get install fail2ban -y
 ```
-# Create a filter for unifi on the faul2ban filter.d folder
+# Create a filter for unifi on the fail2ban filter.d folder
 ```
 sudo nano /etc/fail2ban/filter.d/unifi.conf
 ```
