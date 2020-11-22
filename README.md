@@ -29,6 +29,7 @@ findtime  = 300
 maxretry = 4
 [sshd]
 enabled = true
+port = 22
 
 [unifi]
 ignoreip = xxx.yyy.zzz.hhh/32
@@ -42,7 +43,8 @@ findtime = 300
 action = iptables-multiport[name="unifi", port="8443,8080"]
 ```
 Check the ignoreip, that's an IP that will be ignored by the fail2ban, it will never be blocked.
-Make sure to edit the fields based on your specific case, on my case, I want to block any IP address failing more than 4 times in 300 seconds (5 minutes) for 3600 seconds (1 hour)
+Make sure to edit the fields based on your specific case, on my case, I want to block any IP address failing more than 4 times in 300 seconds (5 minutes) for 3600 seconds (1 hour).
+Set the port = 22 to any port that you use for your ssh daemon.
 
 # Restart Fail2ban to apply changes above.
 ```
